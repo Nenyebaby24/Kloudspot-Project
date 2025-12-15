@@ -4,7 +4,7 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import { loginApi, saveToken } from "../services/auth";
-import "../styles/login.css";
+import "../styles/loginPage.css";
 
 export default function Login() {
   const navigate = useNavigate();
