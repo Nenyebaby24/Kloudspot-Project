@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "../pages/Login.jsx ";
+import Login from "../pages/Login. ";
 import Dashboard from "../pages/Dashboard";
 import Entries from "../pages/Entries";
 import { getToken } from "../services/auth";
