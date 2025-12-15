@@ -3,13 +3,11 @@ import { Line, Pie } from "react-chartjs-2";
 import { useNavigate } from "react-router-dom";
 import "chart.js/auto";
 import { FaMale, FaFemale } from "react-icons/fa";
-
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import { request } from "../services/api";
 import { connectSocket, disconnectSocket } from "../socket/socket";
 import "../styles/dashboard.css";
-
 import { Chart } from "chart.js";
 
 Chart.defaults.plugins.legend.labels.usePointStyle = true;
@@ -19,6 +17,7 @@ Chart.defaults.plugins.legend.labels.boxHeight = 8;
 Chart.defaults.plugins.legend.position = "top";
 Chart.defaults.plugins.legend.align = "end";
 Chart.defaults.plugins.legend.labels.color = "#6b7280";
+
 
 
 export default function Dashboard() {
@@ -154,7 +153,7 @@ export default function Dashboard() {
         borderWidth: 2,
         tension: 0.4,
         pointRadius: 0,
-        pointStyle: "circle",
+        
       },
       {
         label: "Female Count",
@@ -162,14 +161,11 @@ export default function Dashboard() {
         borderWidth: 2,
         tension: 0.4,
         pointRadius: 0,
-        pointStyle: "circle",
+        
       },
     ],
   };
   
-
-  
-
 
   const pieChart = {
     labels: ["Male", "Female"],
@@ -180,6 +176,10 @@ export default function Dashboard() {
       },
     ],
   };
+
+
+
+  
 
   
 
@@ -352,12 +352,12 @@ export default function Dashboard() {
                <div className="demo-legend">
                 <div className="legend-item">
                  <FaMale className="male-icon" />
-                  <span>{pieData.male}% Males</span>
+                  <span>{pieData.male}55% Males</span>
                    </div>
 
                 <div className="legend-item">
                  <FaFemale className="female-icon" />
-                <span>{pieData.female}% Females</span>
+                <span>{pieData.female}45% Females</span>
                  </div>
                  </div>
               </Card>

@@ -371,6 +371,32 @@ padding: 10px;
   color: #111827;
 }
 
+.demo-legend {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.male-icon {
+  color: #6ba6a6;
+  font-size: 20px;
+}
+
+.female-icon {
+  color: #b9e3e0;
+  font-size: 20px;
+}
+
+
 
 
 
