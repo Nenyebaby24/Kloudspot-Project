@@ -1,0 +1,268 @@
+/* ===== RESET / BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6f9;
+  color: #111827;
+}
+
+/* ===== LAYOUT ===== */
+.dash-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+.dash-sidebar {
+  width: 240px;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-inner {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.sidebar-links {
+  flex: 1;
+}
+
+.sidebar-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.sidebar-item:hover {
+  background-color: #1e293b;
+}
+
+.sidebar-item.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5f5;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #1e293b;
+}
+
+/* ===== MAIN CONTENT ===== */
+.dash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ===== HEADER ===== */
+.dash-header {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-text {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111827 !important;
+}
+
+.location-btn {
+  background-color: #f1f5f9;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.chevron {
+  margin-left: 6px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.icon-btn {
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.profile-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* ===== SECOND HEADER ===== */
+.sub-header {
+  background-color: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.date-filter-btn {
+  background-color: #f1f5f9;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.calendar-icon {
+  margin-right: 6px;
+}
+
+/* ===== TABLE CARD ===== */
+.entries-table-wrapper {
+  background-color: #ffffff;
+  margin: 24px;
+  border-radius: 12px;
+  padding: 12px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== TABLE ===== */
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.entries-table thead {
+  background-color: #f8fafc;
+}
+
+.entries-table th {
+  text-align: left;
+  padding: 14px 20px;
+  color: #6b7280;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.entries-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.entries-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ===== NAME CELL ===== */
+.name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== LOADER CENTER ===== */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 24px 24px;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: #2563eb;
+  border: none;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #c7d2fe;
+  cursor: not-allowed;
+}
+
+.sidebar-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+

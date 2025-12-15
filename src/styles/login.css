@@ -1,0 +1,160 @@
+/* FULL PAGE */
+.login-page {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* BACKGROUND IMAGE FROM FIGMA */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  background: url("/office-bg.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* LEFT HERO TEXT */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 480px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.55);
+}
+
+/* LOGIN CARD WRAPPER */
+.login-card-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* MAIN LOGIN CARD */
+.login-card {
+  width: 370px;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0;
+  background: white !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* FIGMA HEADER (GREEN GRADIENT) */
+.card-header {
+  background: linear-gradient(150deg, #006965, #003c38);
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 55px;
+  margin-bottom: 6px;
+  color: white;
+ 
+}
+
+.brand-text{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white !important;
+}
+
+
+
+
+/* FORM BODY */
+.login-form {
+  padding: 26px 30px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.password-row {
+  position: relative;
+}
+
+.password-row input {
+  width: 100%;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+/* ERROR */
+.form-error {
+  color: red;
+  margin-top: -8px;
+  margin-bottom: -5px;
+  font-size: 14px;
+}
+
+/* TEST CREDENTIALS */
+.test-cred {
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-bg {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    text-align: center;
+  }
+
+  .login-card {
+    width: 90%;
+    max-width: 380px;
+  }
+}
+

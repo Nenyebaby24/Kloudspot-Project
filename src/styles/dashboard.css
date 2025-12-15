@@ -1,0 +1,483 @@
+/* =========================
+   ROOT LAYOUT
+========================= */
+
+.dash-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6fa;
+  overflow-x: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.dash-sidebar {
+  width: 240px;
+  background: linear-gradient(150deg, #006965, #003c38);;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-inner {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.sidebar-links {
+  flex: 1;
+}
+
+.sidebar-item {
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.sidebar-item:hover {
+  background: #1e293b;
+  color: #fff;
+}
+
+.sidebar-item.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.dash-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 24px;
+  transition: margin 0.3s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.date-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =========================
+   SECTION HEADERS
+========================= */
+
+.section-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.summary-box {
+  padding: 18px;
+}
+
+.sb-title {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.sb-value {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.sb-sub {
+  font-size: 12px;
+  color: #22c55e;
+}
+
+.sb-sub.red {
+  color: #ef4444;
+}
+
+/* =========================
+   CHARTS
+========================= */
+
+.chart-block {
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.big-chart {
+  height: 320px;
+}
+
+.chart-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   DEMOGRAPHICS
+========================= */
+
+.demographics-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* fixed pie card + flexible chart */
+  gap: 16px;                        /* tighter spacing */
+  align-items: stretch;
+  
+}
+.demo-pie-card,
+.demographics-grid .chart-block {
+  height: 100%;
+}
+
+
+
+.demo-pie-card {
+padding: 10px;
+}
+
+.pie-wrapper {
+  height: 200px;
+}
+
+.demo-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+/* =========================
+   TOP HEADER
+========================= */
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+/* LEFT GROUP */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827 !important;
+}
+
+/* LOCATION BUTTON */
+.location-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* RIGHT GROUP */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* LANGUAGE */
+.lang-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ICON BUTTON */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+/* PROFILE */
+.profile-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* =========================
+   SECOND HEADER
+========================= */
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* DATE BUTTON */
+.date-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calendar-icon {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+/* ===== SIDEBAR TOGGLE ===== */
+
+
+.dash-sidebar.closed {
+  width: 70px;
+}
+
+.dash-sidebar.closed .menu-title,
+.dash-sidebar.closed .sidebar-item,
+.dash-sidebar.closed .logout-btn {
+  display: none;
+}
+
+/* ===== MAIN EXPAND ===== */
+.dash-main.expanded {
+  margin-left: 70px;
+}
+
+.sidebar-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== MOBILE HAMBURGER ===== */
+.mobile-hamburger {
+  display: none;          /* hidden on desktop */
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #111827;
+}
+
+
+
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* TABLET & MOBILE */
+@media (max-width: 1023px) {
+
+  /* Sidebar becomes off-canvas */
+  .dash-sidebar {
+    transform: translateX(-100%);
+  }
+  .mobile-hamburger.open {
+    transform: translateX(0);   /* slide in */
+  }
+
+  /* Main content full width */
+  .dash-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Cards stack */
+  .summary-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Demographics stack */
+  .demographics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-chart {
+    height: auto;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .location-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  
+.dash-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1200;
+  }
+
+  .dash-sidebar.closed {
+    transform: translateX(-100%);
+  }
+
+  .dash-main {
+    margin-left: 0;
+  }
+
+  .mobile-hamburger {
+    display: inline-flex;  /* visible on mobile */
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .sub-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .date-filter-btn {
+    align-self: flex-end;
+  }
+
+  
+
+  .dash-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1200;
+  }
+
+  .dash-sidebar.closed {
+    transform: translateX(-100%);
+  }
+
+  .dash-main {
+    margin-left: 0;
+  }
+
+  .mobile-hamburger {
+    display: inline-flex;
+  }
+}
+
+
+
